@@ -1,0 +1,17 @@
+*** Settings ***
+Documentation  This is a test
+Resource  ../../Resources/PageObjects/homepage.txt
+
+
+Suite Setup  Open homepage
+Test Teardown  Close All Browsers
+
+*** Test Cases ***
+Demo test case
+   [Documentation]  user can sign up to donate
+   [Tags]  Smoke
+   Given I am on Homepage
+   When I click Give button
+
+#   Then I see Give Today form
+

@@ -13,19 +13,19 @@ Add Python directory to the Environment Variables Path. (EX: C:\Python27 and C:\
 
 
 Verify the installed Python version in CMD
-'python --version' 
+`python --version`
 Command result should match the installed version (for example: Python 2.7.6)
 
 Install robot framework with pip command. In CMD run
-'pip install robotframework'
+`pip install robotframework`
 
 Verify the  robotframework version
-'robot --version'
+`robot --version`
 Command Result should match the installed version (for ref: Robot Framework 2.8.4 (Python 2.7.6 on win32))
 
 
 Install DatabaseLibrary
-'pip install robotframework-databaselibrary'
+`pip install robotframework-databaselibrary`
 Add chromedriver path to the environmental variables PATH
 chromedriver is located in the Demo folder, the path to it needs to be added to the Environmental Variables  PATH
 

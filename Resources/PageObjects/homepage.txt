@@ -8,28 +8,34 @@ Library  String
 
 
 *** Variables ***
-${HOMEPAGE_URL}  https://www.children.org/
+${HOMEPAGE_URL}  https://qalearningcenter.com/
 ${BROWSER}  gc
-${SITE_LOGO}  //a[@class='logo']/span[@class='logo-white']/img[@alt='Children International']
-${GIVE_BTN}  //a[text()='Give']
+${SITE_LOGO}  (//div[@data-aid="HEADER_LOGO_RENDERED"])[1]
+${CONTACT_US}  //div[@id="bs-3"]//a[@href="/contact-us"]
 
 *** Keywords ***
 Open homepage
-    [Documentation]  Opens specified browser and loads XPRO login page
+    [Documentation]  Opens specified browser and loads home page
     open browser  ${HOMEPAGE_URL}  ${BROWSER}
     maximize browser window
     @{window_size}=  get window size
     log many  @{window_size}
 
 I am on Homepage
-    #Check Site Logo Image
+    [Documentation]  Check Site Logo Image
     element should be visible  ${SITE_LOGO}
     capture page screenshot
 
-I click Give button
+I go to Contact Us page
     [Documentation]  clicking give button
-    wait until element is visible  ${GIVE_BTN}
-    click element  ${GIVE_BTN}
+    wait until element is visible  ${CONTACT_US}
+    click element  ${CONTACT_US}
+
+Contact Us Form Displays
+    [Documentation]  verifies form displays
+    wait until element is visible  ${CONTACT_US}
+
+
 
 
 

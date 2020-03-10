@@ -8,13 +8,13 @@ To use Robot Framework with Python, you need to install Python, robot framework,
 
 
 ## Install Python
-Go to  https://www.python.org/  install the 2.7.* version
-Add Python directory to the Environment Variables Path. (EX: C:\Python27 and C:\Python27\Scripts)
+Go to  https://www.python.org/  install the 3.8.* version
+Add Python directory to the Environment Variables Path. (EX: C:\Python3 and C:\Python3\Scripts)
 
 
 Verify the installed Python version in CMD
 `python --version`
-Command result should match the installed version (for example: Python 2.7.6)
+Command result should match the installed version (for example: Python 3.8)
 
 Install robot framework with pip command. In CMD run
 `pip install robotframework`
@@ -31,7 +31,7 @@ chromedriver is located in the Demo folder, the path to it needs to be added to 
 
 
 ## Install PyCharm
-Go to https://www.jetbrains.com/pycharm/download/previous.html and install PyCharm Community edition Version 2016.3.3
+Go to https://www.jetbrains.com/pycharm/download/previous.html and install PyCharm Community edition Version 2019.*
 Configure PyCharm Settings
 Go to Files> Settings>plugins >Browse Repositories for IntelliBot and install
 
@@ -51,3 +51,7 @@ http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.htmlpyth
 http://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
 
 Please Note: Selenium2Library was renamed to SeleniumLibrary last week, so wherever you see a reference to Selenium2Library, assume SeleniumLibrary, and vice versa.
+
+## To run the tests
+
+`robot path/to/tests/dir/test.txt`

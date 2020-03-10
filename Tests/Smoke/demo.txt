@@ -11,7 +11,6 @@ Demo test case
    [Documentation]  user can sign up to donate
    [Tags]  Smoke
    Given I am on Homepage
-   When I click Give button
-
-#   Then I see Give Today form
+   When I go to Contact Us page
+   Then Contact Us Form Displays
 
